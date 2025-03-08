@@ -19,6 +19,7 @@ interface TypographyProps {
   color?: string;
   align?: 'left' | 'center' | 'right' | 'justify';
   style?: React.CSSProperties; 
+  onClick?: (event: React.MouseEvent<HTMLParagraphElement | HTMLHeadingElement>) => void;
 }
 
 const variantClasses: Record<TypographyVariant, string> = {
@@ -34,27 +35,30 @@ const variantClasses: Record<TypographyVariant, string> = {
   subtitle: 'text-sm font-medium'
 };
 
-export const Typography: React.FC<TypographyProps> = ({
+const Typography: React.FC<TypographyProps> = ({
   variant = 'body1',
   children,
   className = '',
   color = 'inherit',
   align = 'left',
-  style = {} 
+  style = {}, 
+  onClick
 }) => {
   const Component = variant.startsWith('h') ? variant : 'p';
   
   const classes = [
     variantClasses[variant],
     `text-${align}`,
-    className
+    className,
+    onClick ? 'cursor-pointer' : ''
   ].join(' ');
 
   return React.createElement(
     Component,
     {
       className: classes,
-      style: { color, ...style }
+      style: { color, ...style },
+      onClick
     },
     children
   );
