@@ -22,7 +22,7 @@ const Login = () => {
 
     return (
         <Box className="login-container flex items-center justify-center min-h-screen" style={{ height: '100vh', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', }}>
-            <Box className="bg-black p-6 rounded-lg shadow-md w-96" style={{ display: "flex", flexDirection: 'column', gap: '10px ', border: '1px solid #ccc', width: '30%', padding: '30px', borderRadius: '10px', background: '#fff' }}>
+            <Box className="bg-black p-6 rounded-lg shadow-md w-96" style={{ display: "flex", flexDirection: 'column', gap: '20px ', border: '1px solid #ccc', width: '30%', padding: '30px', borderRadius: '10px', background: '#fff' }}>
                 <h2 style={{ color: '#243b55' }} className="text-center text-xl font-bold mb-4 text-white">Login</h2>
 
                 <TextField
@@ -35,14 +35,17 @@ const Login = () => {
                     style={{ backgroundColor: "#f9f9f9", borderColor: "#aaa", width: '95%' }}
                 />
 
+
                 <TextField
                     label="Password"
                     type="password"
                     placeholder="Enter your password"
-                    value={password}
+                    value={email}
                     onChange={(e) => setPassword(e.target.value)}
                     style={{ backgroundColor: "#f9f9f9", borderColor: "#aaa", width: '95%' }}
+
                 />
+
 
                 <Button
                     onClick={handleLogin}

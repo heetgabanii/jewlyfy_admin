@@ -45,20 +45,19 @@ const TextField: React.FC<TextFieldProps> = ({
         style={{
           padding: "10px",
           borderRadius: "8px",
-          border: error ? "1px solid red" : "1px solid #ccc",
+          border: "none",
           outline: "none",
-          transition: "border-color 0.3s",
-          backgroundColor: "#fff",
+          transition: "all 0.3s",
+          backgroundColor: "#f9fafb",
           width: "100%",
           fontSize: "16px",
+          boxShadow: "inset 2px 2px 6px rgba(0, 0, 0, 0.5)",
           ...style,
         }}
-        className={`shadow-sm text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition duration-300
-          ${
-            error
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 dark:border-gray-700 focus:ring-blue-500"
-          } focus:ring-2 outline-none`}
+        className={`text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-900 
+          transition duration-300 focus:outline-none focus:ring-0
+          ${error ? "shadow-[inset_0_2px_4px_rgba(255,0,0,0.1)]" : ""}
+          hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)]`}
       />
 
       {/* Error Message (Below Input) */}
