@@ -28,8 +28,12 @@ const TextField: React.FC<TextFieldProps> = ({
       {/* Label (Above Input) */}
       {label && (
         <label
-          className="mb-1 text-gray-700 dark:text-gray-300 font-medium"
-          style={{ fontSize: "14px", fontFamily:"revert"}}
+          className="mb-3 text-gray-700 dark:text-gray-300 font-medium"
+          style={{
+            fontSize: "14px",
+            fontFamily: "revert",
+            marginBottom: "25px"
+          }}
         >
           {label} {required && <span className="text-red-500">*</span>}
         </label>
@@ -51,7 +55,8 @@ const TextField: React.FC<TextFieldProps> = ({
           backgroundColor: "#f9fafb",
           width: "100%",
           fontSize: "16px",
-          boxShadow: "inset 2px 2px 6px rgba(0, 0, 0, 0.5)",
+          boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.1)",
+          marginTop: "12px",
           ...style,
         }}
         className={`text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-900 
