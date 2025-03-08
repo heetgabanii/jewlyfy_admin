@@ -14,9 +14,9 @@ const Register: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     setError(null);
-
+  
     try {
-      const response = await api.post("/auth/register", { email, password });
+      await api.post("/auth/register", { email, password }); 
       alert("Registration successful!");
       navigate("/login"); 
     } catch (err: any) {
@@ -25,6 +25,7 @@ const Register: React.FC = () => {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
