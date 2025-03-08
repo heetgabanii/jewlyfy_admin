@@ -29,7 +29,11 @@ const TextField: React.FC<TextFieldProps> = ({
       {label && (
         <label
           className="mb-1 text-gray-700 dark:text-gray-300 font-medium"
-          style={{ fontSize: "14px", fontFamily:"revert"}}
+          style={{
+            marginLeft:'4px',
+            fontSize: "14px",
+            fontFamily: "revert",
+          }}
         >
           {label} {required && <span className="text-red-500">*</span>}
         </label>
@@ -51,6 +55,7 @@ const TextField: React.FC<TextFieldProps> = ({
           backgroundColor: "#f9fafb",
           width: "100%",
           fontSize: "16px",
+          marginTop: "8px",
           boxShadow: "inset 2px 2px 6px rgba(0, 0, 0, 0.5)",
           ...style,
         }}
