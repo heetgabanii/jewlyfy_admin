@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -21,8 +26,6 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
           <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/register" element={<Register />} />
-        
-        {/* Dashboard Layout with Nested Routes */}
         <Route path="/dashboard" element={<Dashboard />}>
         <Route path="home" element={<Home />}/>
           <Route path="users" element={<Users />} />
