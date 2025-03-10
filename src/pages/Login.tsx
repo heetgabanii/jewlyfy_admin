@@ -6,7 +6,9 @@ import TextField from "../components/Textfield";
 import Button from "../components/Button";
 import Logo from "../logo/logo-transparent.svg";
 import { Typography } from "@mui/material";
-import { FcGoogle } from "react-icons/fc";
+import AppleIcon from "../assets/AppleIcon";
+import GoogleIcon from "../assets/GoogleIcon";
+import FacebookIcon from "../assets/FacebookIcon";
 
 const Login = () => {
   const api = useApi();
@@ -45,6 +47,7 @@ const Login = () => {
           height: "auto",
           zIndex: 10,
         }}
+        alt="Logo"
       />
       <Box
         className="bg-black p-6 rounded-lg shadow-md w-96"
@@ -59,8 +62,9 @@ const Login = () => {
           background: "#fff",
         }}
       >
-        <Typography variant="h2"
-          style={{ color: "#243b55", fontSize:"24px", fontWeight:"bold" }}
+        <Typography
+          variant="h2"
+          style={{ color: "#243b55", fontSize: "24px", fontWeight: "bold" }}
           className="text-center text-xl font-bold mb-4 text-white"
         >
           Login
@@ -77,7 +81,7 @@ const Login = () => {
             backgroundColor: "#f9f9f9",
             borderColor: "#aaa",
             width: "95%",
-            // padding:'10px',
+            padding: "10px",
             // paddingBottom:'0px'
           }}
         />
@@ -92,8 +96,7 @@ const Login = () => {
             backgroundColor: "#f9f9f9",
             borderColor: "#aaa",
             width: "95%",
-            // padding:'10px',
-            
+            padding: "10px",
           }}
         />
 
@@ -105,29 +108,49 @@ const Login = () => {
           className="shadow-lg hover:shadow-xl"
           style={{
             padding: "10px",
+            marginLeft: "7px",
             borderRadius: "5px",
             width: "95%",
             cursor: "pointer",
-            backgroundColor:'#303030',
-            border:'none',
-            color:'white',
-            fontSize:'16px',
-            fontWeight:'bold',
-            fontFamily:"sans-serif",
-            boxShadow:"0 2px 3px 0 #000"
+            backgroundColor: "#303030",
+            border: "none",
+            color: "white",
+            fontSize: "16px",
+            fontWeight: "bold",
+            fontFamily: "sans-serif",
+            boxShadow: "0 2px 3px 0 #000",
           }}
         >
           Login
         </Button>
+        <Typography
+          variant="body1"
+          style={{ textAlign: "center", padding: "0", marginLeft: "-20px" }}
+        >
+          or
+        </Typography>
 
+        <Box
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: "-15px",
+            cursor: "pointer",
+            width: "100%",
+            gap: "28%",
+          }}
+        >
+          <AppleIcon size={30} />
+          <FacebookIcon size={24} />
+          <GoogleIcon size={21} />
+        </Box>
         <p className="text-center text-sm mt-3">
           New to Jwelify?{" "}
           <a href="/Register" className="text-blue-500">
             Register
           </a>
         </p>
-
-        <FcGoogle />
       </Box>
     </Box>
   );

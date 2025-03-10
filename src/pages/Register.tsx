@@ -6,6 +6,9 @@ import TextField from "../components/Textfield";
 import Button from "../components/Button";
 import { Typography } from "@mui/material";
 import Logo from "../logo/logo-transparent.svg";
+import AppleIcon from "../assets/AppleIcon";
+import GoogleIcon from "../assets/GoogleIcon";
+import FacebookIcon from "../assets/FacebookIcon";
 
 const Register: React.FC = () => {
   const api = useApi();
@@ -44,6 +47,7 @@ const Register: React.FC = () => {
             height: "auto",
             zIndex: 10,
           }}
+          alt="Logo"
         />
       </Box>
       <Box
@@ -115,6 +119,7 @@ const Register: React.FC = () => {
                 borderColor: "#aaa",
                 width: "95%",
                 padding: "10px",
+                marginTop: "20px",
               }}
             />
             <Button
@@ -127,10 +132,46 @@ const Register: React.FC = () => {
                 width: "95%",
                 cursor: "pointer",
                 margin: "8px",
+                marginTop: "15px",
+                backgroundColor: "#303030",
+                border: "none",
+                color: "white",
+                fontSize: "16px",
+                fontWeight: "bold",
+                fontFamily: "sans-serif",
+                boxShadow: "0 2px 3px 0 #000",
               }}
             >
               {loading ? "Registering..." : "Register"}
             </Button>
+            <Typography
+              variant="body1"
+              style={{
+                textAlign: "center",
+                padding: "0",
+                marginLeft: "-20px",
+                marginTop: "14px",
+              }}
+            >
+              or
+            </Typography>
+
+            <Box
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginLeft: "-15px",
+                cursor: "pointer",
+                width: "100%",
+                marginTop: "15px",
+                gap: "28%",
+              }}
+            >
+              <AppleIcon size={30} />
+              <FacebookIcon size={24} />
+              <GoogleIcon size={21} />
+            </Box>
           </form>
 
           <p className="text-center text-sm mt-3">
