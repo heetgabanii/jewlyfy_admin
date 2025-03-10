@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useApi } from "../apiProvider";
 import Box from "../components/Box";
-import "./Styles.css"; // Import CSS file for background effect
+import "./Styles.css"; 
 import TextField from "../components/Textfield";
 import Button from "../components/Button";
 import Logo from "../logo/logo-transparent.svg";
@@ -24,6 +24,7 @@ const Login = () => {
       console.error("Login failed:", error);
     }
   };
+
 
   return (
     <Box
@@ -100,6 +101,7 @@ const Login = () => {
           }}
         />
 
+
         <Button
           onClick={handleLogin}
           variant="ghost"
@@ -144,6 +146,7 @@ const Login = () => {
           <AppleIcon size={30} />
           <FacebookIcon size={24} />
           <GoogleIcon size={21} />
+
         </Box>
         <p className="text-center text-sm mt-3">
           New to Jwelify?{" "}

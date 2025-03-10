@@ -3,6 +3,7 @@ import Box from "./Box"
 import { Popover, MenuItem } from "@mui/material";
 import Typography from "./Typography";
 import { Link } from "react-router-dom";
+import Logo from '../assets/logo-transparent.png'
 
 const Navbar = () => {
 
@@ -36,16 +37,17 @@ const Navbar = () => {
     return(
         <Box
         style={{
-          height: "60px",
+          height: "100px",
           borderBottom: "1px solid #ccc",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          background:'#000'
         }}
         className="h-[60px] w-screen bg-gray-900 text-white flex items-center px-6 fixed top-0 left-0 shadow-md"
       >
         <Typography variant="h3" style={{ margin: "0" }}>
-          Dashboard
+        <img src={Logo} style={{width:'120px',height:'120px'}} alt="logo" />
         </Typography>
 
         <Box
@@ -53,6 +55,7 @@ const Navbar = () => {
           justifyContent="flex-end"
           className="ml-auto cursor-pointer"
           onClick={handleClick}
+          style={{marginRight:'40px'}}
         >
           <Box
             style={{
