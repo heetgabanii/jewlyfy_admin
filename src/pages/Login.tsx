@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useApi } from "../apiProvider";
 import Box from "../components/Box";
-import "./Styles.css"; 
+import "./Styles.css";
 import TextField from "../components/Textfield";
 import Button from "../components/Button";
 import Logo from "../logo/logo-transparent.svg";
@@ -25,7 +25,6 @@ const Login = () => {
     }
   };
 
-
   return (
     <Box
       className="login-container flex items-center justify-center min-h-screen"
@@ -44,8 +43,8 @@ const Login = () => {
           position: "absolute",
           top: "20px",
           left: "20px",
-          width: "80px",
-          height: "auto",
+          width: "50px",
+          height: "50px",
           zIndex: 10,
         }}
         alt="Logo"
@@ -91,7 +90,7 @@ const Login = () => {
           label="Password"
           type="password"
           placeholder="Enter your password"
-          value={email}
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           style={{
             backgroundColor: "#f9f9f9",
@@ -100,7 +99,6 @@ const Login = () => {
             padding: "10px",
           }}
         />
-
 
         <Button
           onClick={handleLogin}
@@ -146,7 +144,6 @@ const Login = () => {
           <AppleIcon size={30} />
           <FacebookIcon size={24} />
           <GoogleIcon size={21} />
-
         </Box>
         <p className="text-center text-sm mt-3">
           New to Jwelify?{" "}
